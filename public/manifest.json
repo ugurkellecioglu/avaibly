@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fill Up",
+  "description": "An extension to fill up the given form automatically",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Fill Up"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://service2.diplo.de/*/*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab"
+    ],
+    "icons": { 
+      "16": "16.png",
+      "48": "48.png",
+     "128": "128.png" }
+}

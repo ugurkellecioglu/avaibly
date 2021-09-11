@@ -1,0 +1,35 @@
+@use 'base';
+
+.HeaderWrapper {
+    width: base.$width-default;
+    height: 56px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Left {
+        margin-left: 13px;
+        display: flex;
+        align-items: center;
+        font-family: inter;
+        font-weight: 700;
+        font-size: 16px;
+
+        p {
+            margin-left: 8px;
+        }
+    }
+    .Right {
+        a { 
+            margin-right: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+    }
+    img {   
+        height: 24px;
+        width: 24px;
+        border-radius: 4px;
+    }
+}

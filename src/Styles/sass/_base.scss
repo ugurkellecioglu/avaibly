@@ -1,0 +1,20 @@
+$background-color: #DFE7EF;
+$purple-color: #4400CC;
+$green-color: #00FF47;
+$yellow-color: #FFF500;
+$red-color:  #FF0A544D;
+$purple-gradient-color: linear-gradient(180deg, rgba(123, 22, 255, 0.5) 0%, rgba(68, 0, 204, 0.5) 100%);
+$header-height: 56px;
+$height-register-default: 271px;
+$width-default: 375px;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+* {
+ font-family: 'Inter', sans-serif;
+ color: #24292E;
+}
+input, button, submit
+{
+  border:none;
+}
