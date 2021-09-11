@@ -1,13 +1,20 @@
 import './App.css';
-import { Header, RegisterLogin } from './Components';
+import { Header, PageSelector, RegisterLogin } from './Components';
 
 
 
 function App() {
   return (
-    <div>
-      <Header />
-      <RegisterLogin />
+    <div style={{ display: 'flex' }}>
+      <div>
+        <Header />
+        <RegisterLogin />
+      </div>
+      <div>
+        <Header />
+        <PageSelector />
+      </div>
+
     </div>
   )
 }

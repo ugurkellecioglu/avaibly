@@ -2,6 +2,7 @@ import React from 'react'
 import "../../Styles/css/RegisterLogin.css"
 function RegisterLogin() {
 
+    
     return (
         <div className="RegisterWrapper">
             <form className="Form" >

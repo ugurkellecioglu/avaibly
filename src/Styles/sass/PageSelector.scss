@@ -1,0 +1,13 @@
+@use 'base';
+
+.PageSelectorWrapper {
+    display: flex;
+    justify-content: space-around;
+    .Category {
+        height: 56px;
+        width: 187.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
