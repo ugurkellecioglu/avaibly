@@ -3,6 +3,7 @@
 .PageSelectorWrapper {
     display: flex;
     justify-content: space-around;
+    width: base.$width-default;
     .Category {
         height: 56px;
         width: 187.5px;

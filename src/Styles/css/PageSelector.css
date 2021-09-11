@@ -2,6 +2,8 @@
 * {
   font-family: "Inter", sans-serif;
   color: #24292E;
+  margin: 0;
+  padding: 0;
 }
 
 input, button, submit {
@@ -11,6 +13,7 @@ input, button, submit {
 .PageSelectorWrapper {
   display: flex;
   justify-content: space-around;
+  width: 375px;
 }
 .PageSelectorWrapper .Category {
   height: 56px;
