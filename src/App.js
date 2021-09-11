@@ -1,3 +1,4 @@
+import { Route, Switch } from 'react-router';
 import './App.css';
 import { Header, PageSelector, RegisterLogin } from './Components';
 
@@ -5,17 +6,15 @@ import { Header, PageSelector, RegisterLogin } from './Components';
 
 function App() {
   return (
-    <div style={{ display: 'flex' }}>
-      <div>
+    <>
+      <div >
         <Header />
-        <RegisterLogin />
+        <Switch >
+          <Route path="/" component={RegisterLogin} exact />
+          <Route path="/home" component={PageSelector} exact />
+        </Switch>
       </div>
-      <div>
-        <Header />
-        <PageSelector />
-      </div>
-
-    </div>
+    </>
   )
 }
 
