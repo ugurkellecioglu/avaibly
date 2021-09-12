@@ -1,13 +1,23 @@
 import React from 'react'
-import colors from '../../constants/colors'
+import tags from '../../constants/tags'
 import Tag  from '../Tag/Tag'
 
-function Tags() {
+function Tags({handleTag}) {
+    const tagDatas = tags
+    const handleSelect = (element) => {
+        for(let i = 0; i < tagDatas.length; i++) {
+            if (tagDatas[i].text === element.innerText) {
+                tagDatas[i].active = true
+                handleTag(element.innerText)
+            }   
+            else tagDatas[i].active = false
+        }
+    }
     return (
         <div>
-            <Tag color={colors.green} text="#i-m-available"/>
-            <Tag color={colors.yellow} text="#will-be-available-soon"/>
-            <Tag color={colors.red} text="#not-available"/>
+            {
+                tagDatas.map(tag => <Tag  selected={handleSelect} color={tag.color} text={tag.text} active={tag.active} />)
+            }
         </div>
     )
 }

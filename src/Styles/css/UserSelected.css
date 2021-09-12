@@ -12,10 +12,10 @@ input, button, submit {
 
 .UserSelectedWrapper {
   background-color: #DFE7EF;
-  height: 215px;
+  height: 385px;
   width: 375px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .UserSelectedWrapper .Card {
@@ -43,6 +43,27 @@ input, button, submit {
   font-weight: normal;
   font-size: 11px;
   line-height: 16px;
+}
+.UserSelectedWrapper .UpdateWrapper {
+  width: 375px;
+  margin-top: 8px;
+}
+.UserSelectedWrapper .UpdateWrapper .CheckItem {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 19px;
+  margin-right: 8px;
+  margin-top: 24px;
+  align-items: center;
+}
+.UserSelectedWrapper .UpdateWrapper .CheckItem .CheckboxItem {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=UserSelected.css.map */

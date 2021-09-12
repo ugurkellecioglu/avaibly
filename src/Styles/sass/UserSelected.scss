@@ -4,10 +4,10 @@
 
 .UserSelectedWrapper {
     background-color: base.$background-color;
-    height: 215px;
+    height:385px;
     width: base.$width-default;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     .Card {
         width: 359px;
@@ -33,6 +33,27 @@
                 font-weight: normal;
                 font-size: 11px;
                 line-height: 16px;
+            }
+        }
+    }
+    .UpdateWrapper {
+        width: base.$width-default;
+        margin-top: 8px;
+        .CheckItem {
+            font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 11px;
+line-height: 16px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 19px;
+            margin-right: 8px;
+            margin-top: 24px;
+            align-items: center;
+            .CheckboxItem {
+                display: flex;
+                align-items: center;
             }
         }
     }
