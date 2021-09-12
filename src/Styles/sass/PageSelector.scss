@@ -4,11 +4,25 @@
     display: flex;
     justify-content: space-around;
     width: base.$width-default;
-    .Category {
-        height: 56px;
-        width: 187.5px;
+    flex-direction: column;
+    .CategoryWrapper {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        .Category {
+            height: 56px;
+            display: flex;
+            width: 187.5px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: opacity 0.5s ease-in;
+        }
+    }
+    .Line {
+        width: 187.5px;
+        height: 3px;
+        background-color: base.$black-color;
+        transition: transform 0.5s ease;
+        transform: translate(0px, 0px);
     }
 }
