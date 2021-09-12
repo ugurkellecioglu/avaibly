@@ -8,6 +8,8 @@ import UserSelected from "./UserSelected";
 import Tag from "./Tag";
 import Tags from "./Tags";
 import Button from "./Button";
+import Notification from "./Notification";
+
 export {
     Header,
     RegisterLogin,
@@ -18,4 +20,5 @@ export {
     Tag,
     Tags,
     Button,
+    Notification
 }
