@@ -8,7 +8,7 @@ function DashboardPage() {
         <div>
             <PageSelector handlePageProp={handlePage}/>
             {
-                mode === 'user' ? <UserSelected /> : <StatusSelected />
+                mode === 'user' ? <UserSelected /> : mode === "status" ? <StatusSelected /> : null
             }
         </div>
     )

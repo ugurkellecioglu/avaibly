@@ -1,1 +1,7 @@
 @use 'base';
+
+.Wrapper {
+    height: 346px;
+    width: base.$width-default;
+    background-color: base.$background-color
+}

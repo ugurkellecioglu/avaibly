@@ -9,6 +9,7 @@ import Tag from "./Tag";
 import Tags from "./Tags";
 import Button from "./Button";
 import Notification from "./Notification";
+import Status from "./Status";
 
 export {
     Header,
@@ -20,5 +21,6 @@ export {
     Tag,
     Tags,
     Button,
-    Notification
+    Notification,
+    Status
 }
