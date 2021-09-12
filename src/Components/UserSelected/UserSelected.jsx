@@ -44,7 +44,7 @@ function UserSelected() {
                         <p>{bioChecked ? "On" : "Off"}</p>
                     </div>
                 </div>
-                <div>
+                <div className="ButtonWrapper">
                     <Button text="Update my profile"/>
                 </div>
             </div>
