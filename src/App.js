@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router';
-import { Header, PageSelector, RegisterLogin } from './Components';
+import { DashboardPage, Header, RegisterLogin } from './Components';
 
 
 
@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Switch >
           <Route path="/index.html" component={RegisterLogin} exact />
-          <Route path="/home" component={PageSelector} exact />
+          <Route path="/home" component={DashboardPage} exact />
         </Switch>
       </div>
     </>
