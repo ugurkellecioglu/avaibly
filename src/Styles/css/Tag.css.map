@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"Tag.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/_base.scss","../sass/Tag.scss"],"names":[],"mappings":"AAWQ;AAER;EACC;EACA;EACA;EACA;;;AAGD;EAEE;;;ACnBF;EACI;EACA;EACA;EACA;EACA;;AACA;EACI;;AACA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;AAEJ;EACI","file":"Tag.css"}

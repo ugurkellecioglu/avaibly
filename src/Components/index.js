@@ -6,6 +6,8 @@ import StatusSelected from "./StatusSelected";
 import DashboardPage from "./DashboardPage";
 import UserSelected from "./UserSelected";
 import Tag from "./Tag";
+import Tags from "./Tags";
+
 export {
     Header,
     RegisterLogin,
@@ -14,4 +16,5 @@ export {
     DashboardPage,
     StatusSelected,
     Tag,
+    Tags,
 }

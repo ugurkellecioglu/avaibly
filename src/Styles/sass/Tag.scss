@@ -1,0 +1,26 @@
+@use 'base';
+
+
+.TagWrapper {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+    .TagText {
+        margin-top: 8px;
+        .Text {
+            width: 91px;
+            height: 20px;
+            padding: 2px 8px;
+            border-radius: 100px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.4s ease;
+        }
+        .Text:hover {
+            opacity: 1;
+        }
+    }
+    
+}

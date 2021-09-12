@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  color: #24292E;
+  margin: 0;
+  padding: 0;
+}
 
+input, button, submit {
+  border: none;
+}
+
+.TagWrapper {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+}
+.TagWrapper .TagText {
+  margin-top: 8px;
+}
+.TagWrapper .TagText .Text {
+  width: 91px;
+  height: 20px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+.TagWrapper .TagText .Text:hover {
+  opacity: 1;
+}
 
 /*# sourceMappingURL=Tag.css.map */
