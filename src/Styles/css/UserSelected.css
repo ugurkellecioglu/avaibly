@@ -10,4 +10,39 @@ input, button, submit {
   border: none;
 }
 
+.UserSelectedWrapper {
+  background-color: #DFE7EF;
+  height: 215px;
+  width: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.UserSelectedWrapper .Card {
+  width: 359px;
+  height: 188px;
+  background: white;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.UserSelectedWrapper .Card .CardBody {
+  margin-left: 36px;
+  margin-right: 36px;
+}
+.UserSelectedWrapper .Card .CardBody .Title {
+  margin-top: 28px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+.UserSelectedWrapper .Card .CardBody .Info {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+}
+
 /*# sourceMappingURL=UserSelected.css.map */

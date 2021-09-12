@@ -1,1 +1,39 @@
 @use 'base';
+
+
+
+.UserSelectedWrapper {
+    background-color: base.$background-color;
+    height: 215px;
+    width: base.$width-default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Card {
+        width: 359px;
+        height: 188px;
+        background: white;
+        border-radius: 8px;
+        margin-top: 8px;
+        
+        .CardBody {
+            margin-left: 36px;
+            margin-right: 36px;
+            .Title {
+                margin-top: 28px;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            .Info {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+    }
+}
