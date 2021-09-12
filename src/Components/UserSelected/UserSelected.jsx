@@ -1,4 +1,5 @@
 import React from 'react'
+import "../../Styles/css/UserSelected.css"
 
 function UserSelected() {
     return (
