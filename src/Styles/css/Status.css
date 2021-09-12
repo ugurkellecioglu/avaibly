@@ -10,4 +10,56 @@ input, button, submit {
   border: none;
 }
 
+.StatusWrapper {
+  width: 359px;
+  height: 124px;
+  margin-top: 8px;
+  background-color: white;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+.StatusWrapper .Header {
+  margin-top: 16px;
+  display: flex;
+  margin-left: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 16px;
+}
+.StatusWrapper .Header .ProfilePhoto {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: black;
+}
+.StatusWrapper .Header .ProfileInfo {
+  margin-left: 8px;
+}
+.StatusWrapper .Header .ProfileInfo .Time p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  color: #7C8894;
+}
+.StatusWrapper .Body {
+  margin-top: 8px;
+  margin-left: 56px;
+  font-family: Inter;
+}
+.StatusWrapper .Body p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+.StatusWrapper .Footer {
+  margin-top: 8px;
+  margin-left: 56px;
+}
+
 /*# sourceMappingURL=Status.css.map */

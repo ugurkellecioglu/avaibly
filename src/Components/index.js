@@ -10,7 +10,7 @@ import Tags from "./Tags";
 import Button from "./Button";
 import Notification from "./Notification";
 import Status from "./Status";
-
+import Statutes from "./Statuses";
 export {
     Header,
     RegisterLogin,
@@ -22,5 +22,6 @@ export {
     Tags,
     Button,
     Notification,
-    Status
+    Status,
+    Statutes
 }
