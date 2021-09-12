@@ -65,5 +65,13 @@ input, button, submit {
   display: flex;
   align-items: center;
 }
+.UserSelectedWrapper .UpdateWrapper .CheckItem .CheckboxItem p {
+  margin-left: 10px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
 
 /*# sourceMappingURL=UserSelected.css.map */

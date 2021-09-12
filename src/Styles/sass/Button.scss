@@ -1,0 +1,21 @@
+@use 'base';
+
+.LoginButton {
+    cursor: pointer;
+    margin-bottom: 16px;
+    width: 359px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px 24px 8px 24px;
+    background-color: base.$purple-color;
+    color: white;
+    font-family: inter;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    line-height: 24px;
+}
+.LoginButton:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}

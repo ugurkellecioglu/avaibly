@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '..'
 import "../../Styles/css/RegisterLogin.css"
 function RegisterLogin() {
 
@@ -9,7 +10,7 @@ function RegisterLogin() {
                 <div ><input type="text" className="Email" placeholder="Enter your email"></input></div>
                 <div ><input type="password" className="Password" placeholder="Enter your password"></input></div>
             </form>
-            <div ><button className="LoginButton">Login to my account</button></div>
+            <Button text="Login to my account"/>
             <a href="#">Forgot your password?</a>
         </div>
     )
