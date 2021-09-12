@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Tags } from '..'
+import { Button, Notification, Tags } from '..'
 import "../../Styles/css/UserSelected.css"
 import Switch from "react-switch";
 
@@ -14,13 +14,21 @@ function UserSelected() {
         setheadlineChecked(checked);
     }
     
+    const [active, setActive] = useState(false) 
 
+    const handleUpdate = () => {
+        setActive(true)
+    }
+    const handleClose = () => {
+        setActive(false)
+    }
     const [bioChecked, setbioChecked] = useState(false)
     const handleBio= (checked) => {
         setbioChecked(checked);
     }
     return (
         <div className="UserSelectedWrapper">
+            <Notification active={active} handleClose={handleClose}/>
             <div className="Card">
                 <div className="CardBody">
                     <div className="Title">Welcome</div>
@@ -45,7 +53,7 @@ function UserSelected() {
                     </div>
                 </div>
                 <div className="ButtonWrapper">
-                    <Button text="Update my profile" onClick={()=> alert('aaa')}/>
+                    <Button text="Update my profile" onClick={()=> handleUpdate()}/>
                 </div>
             </div>
         </div>

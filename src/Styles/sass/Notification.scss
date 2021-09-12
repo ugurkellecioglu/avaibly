@@ -1,1 +1,40 @@
 @use "base";
+
+.NotificationWrapper {
+    width: base.$width-default;
+    height: 100%;
+    position: absolute;
+    background-color: base.$background-color;
+    opacity: 0.3;
+    top: 0;
+    z-index: 9999;
+}
+.Notification{
+    width: 226px;
+    height: 56px;
+    display: flex;
+    position: absolute;
+    z-index: 9999999;
+    background-color: #E1F9F2;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+
+  .NotificationBody{
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      font-family: Inter;
+      p {
+        font-style: normal;
+        font-weight: bold;
+        color: #146354;
+        font-size: 16px;
+        line-height: 20px;
+      }
+  }
+    
+}
