@@ -45,7 +45,7 @@ function UserSelected() {
                     </div>
                 </div>
                 <div className="ButtonWrapper">
-                    <Button text="Update my profile"/>
+                    <Button text="Update my profile" onClick={()=> alert('aaa')}/>
                 </div>
             </div>
         </div>
