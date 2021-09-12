@@ -5,7 +5,7 @@ import RegisterLogin from "./RegisterLogin";
 import StatusSelected from "./StatusSelected";
 import DashboardPage from "./DashboardPage";
 import UserSelected from "./UserSelected";
-
+import Tag from "./Tag";
 export {
     Header,
     RegisterLogin,
@@ -13,4 +13,5 @@ export {
     UserSelected,
     DashboardPage,
     StatusSelected,
+    Tag,
 }
