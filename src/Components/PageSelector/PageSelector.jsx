@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import "../../Styles/css/PageSelector.css"
 import userIcon from '../../Assets/userIcon.svg'
 import statusIcon from '../../Assets/statusIcon.svg'
-function PageSelector() {
+function PageSelector({handlePageProp}) {
 
     const userRef = useRef();
     const statusRef = useRef();
@@ -11,6 +11,7 @@ function PageSelector() {
     const [page, setPage] = useState("user")
     const handlePage = (value) => {
         setPage(value)
+        handlePageProp(value)
     }
     useEffect(() => {
         const userElement = userRef.current

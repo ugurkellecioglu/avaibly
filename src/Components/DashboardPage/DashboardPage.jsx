@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PageSelector, StatusSelected, UserSelected } from '..'
 
 function DashboardPage() {
+    const [mode, setMode] = useState("user")
+    const handlePage = (value) => setMode(value)
     return (
         <div>
-            <PageSelector />
-            <UserSelected />
-            <StatusSelected />
+            <PageSelector handlePageProp={handlePage}/>
+            {
+                mode === 'user' ? <UserSelected /> : <StatusSelected />
+            }
         </div>
     )
 }
