@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import tags from '../../constants/tags'
 import Tag  from '../Tag/Tag'
 
-function Tags({handleTag}) {
-    const tagDatas = tags
+function Tags() {
+    const [tagDatas, settagDatas] = useState(tags)
+
     const handleSelect = (element) => {
-        for(let i = 0; i < tagDatas.length; i++) {
-            if (tagDatas[i].text === element.innerText) {
-                tagDatas[i].active = true
-                handleTag(element.innerText)
-            }   
-            else tagDatas[i].active = false
-        }
+            settagDatas(
+                tagDatas.map(tag => {
+                if(tag.text === element.innerText) 
+                    return {...tag, active: true}
+                else 
+                    return {...tag, active: false}
+                }))
     }
     return (
         <div>

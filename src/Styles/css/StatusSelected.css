@@ -14,6 +14,7 @@ input, button, submit {
   height: 346px;
   width: 375px;
   background-color: #DFE7EF;
+  max-height: 346px !important;
 }
 
 /*# sourceMappingURL=StatusSelected.css.map */

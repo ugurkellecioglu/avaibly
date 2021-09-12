@@ -18,7 +18,6 @@ input, button, submit {
   position: relative;
   max-height: 346px;
   background-color: #DFE7EF;
-  overflow-y: auto;
 }
 
 /*# sourceMappingURL=Statuses.css.map */
