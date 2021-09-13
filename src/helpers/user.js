@@ -6,9 +6,9 @@ const user = () => {
     const decoded = jwt_decode(token)
     const d = new Date(0);
     d.setUTCSeconds(decoded.exp);
-
     var dateNow = new Date();
-    return (d.getTime() > dateNow.getTime() && token)
+    if (d.getTime() > dateNow.getTime() && token) return true
+    else return false
 }
 
 export default user;

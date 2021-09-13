@@ -10,15 +10,18 @@ function App() {
 
   useEffect(() => {
     setloggedIn(user())
-    console.log("user", loggedIn)
-  }, [loggedIn])
+  }, [])
 
   return (
     <>
       <div >
         <Header loggedIn={loggedIn} />
         <Switch >
-          <Route loggedIn={loggedIn} path="/index.html" component={RegisterLogin} exact />
+          <Route
+            render={(props) => (
+              <RegisterLogin {...props} loggedIn={loggedIn} />
+            )}
+            path="/index.html" exact />
           <PrivateRoute loggedIn={loggedIn} path="/home" component={DashboardPage} exact />
         </Switch>
       </div>

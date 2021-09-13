@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { Redirect, useHistory } from 'react-router'
 import { Button } from '..'
 import "../../Styles/css/RegisterLogin.css"
+import user from '../../helpers/user'
 function RegisterLogin({handleLoginProps, loggedIn}) {
     
     const history = useHistory()
+    const [user, setuser] = useState(loggedIn)
     const [form, setForm] = useState({})
     const [loading, setloading] = useState(false)
     const handleLogin = (form) => {
@@ -24,8 +26,9 @@ function RegisterLogin({handleLoginProps, loggedIn}) {
 
         }) 
     }
+
     useEffect(() => {
-        if (loggedIn !== false) history.push('/home')
+        if(loggedIn) history.push('/home')
     }, [loggedIn])
 
     return (
