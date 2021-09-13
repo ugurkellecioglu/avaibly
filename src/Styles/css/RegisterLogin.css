@@ -18,6 +18,9 @@ input, button, submit {
   flex-direction: column;
   align-items: center;
 }
+.RegisterWrapper .Loading {
+  width: 375px;
+}
 .RegisterWrapper .Form {
   display: flex;
   flex-direction: column;
