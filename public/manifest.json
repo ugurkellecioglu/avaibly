@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsnr7iapZJpGarXwt6p2+NDnSkfad5zDL+oWvqw9wzYMo086o/pFCkssucurUWcmBNodhYw004ccWFmGaw02NZ//8//jTN05ToTuiGXBXm3EaNy1OM1IEaQ+JyVz+/cfqVM1FbJ0R+VYoDLcSor5HRTJIj61HvuEEyIuTpsZ9FwVQaqKdhpnhhJjiKtVB5knGT/Zfm1NtxB2Z8VH04aOPlWBmJqF+rqHNuOq06hx/AXyFf8ogE22gTiIABLdXpB5fYAzzAeLarficzPYoSYPry+gRahvNtGpmA83DISuJ+Rn+xaVdUs4SlGGRsG0HRDufVTp4NKwaRxujF10Z48NX0wIDAQAB",
   "name": "Avaibly",
   "description": "An extension to fill up the given form automatically",
   "version": "0.0.1",
