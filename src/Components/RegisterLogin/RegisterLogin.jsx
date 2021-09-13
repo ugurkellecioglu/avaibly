@@ -10,19 +10,19 @@ function RegisterLogin({handleLoginProps}) {
     const [loading, setloading] = useState(false)
     const handleLogin = (form) => {
         setloading(true)
-        axios.post('/login', {
+            axios.post('/login', {
                 email: form.email,
                 password: form.password
         }).then(response => {
             setloading(false)
-            if (response.status === 200) {
-                console.log('logged in')
-            } else {
-                console.log('invalid')
+            if(response.data) {
+                localStorage.setItem('token', response.data.token)
+                localStorage.setItem('expires_in', response.data.expires_in)
+                history.push('/home')
             }
-        })
+        }).catch(e => {
 
-        // history.push('/home')
+        }) 
     }
 
     return (
