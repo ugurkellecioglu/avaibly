@@ -1,10 +1,10 @@
 import axios from '../../constants/axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Redirect, useHistory } from 'react-router'
 import { Button } from '..'
 import "../../Styles/css/RegisterLogin.css"
-function RegisterLogin({handleLoginProps}) {
-
+function RegisterLogin({handleLoginProps, loggedIn}) {
+    
     const history = useHistory()
     const [form, setForm] = useState({})
     const [loading, setloading] = useState(false)
@@ -24,6 +24,9 @@ function RegisterLogin({handleLoginProps}) {
 
         }) 
     }
+    useEffect(() => {
+        if (loggedIn !== false) history.push('/home')
+    }, [loggedIn])
 
     return (
         

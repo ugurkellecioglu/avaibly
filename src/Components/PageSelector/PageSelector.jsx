@@ -28,7 +28,7 @@ function PageSelector({handlePageProp}) {
         }
     }, [page])
     return (
-        <div class="PageSelectorWrapper">
+        <div className="PageSelectorWrapper">
             <div className="CategoryWrapper">
                 <div className="Left Category"  ref={userRef} onClick={() => handlePage("user")}>
                     <img width="16px" heigth="18px"  src={userIcon} />

@@ -1,17 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "../../Styles/css/Tag.css"
-function Tag({selected, color,text,active}) {
+function Tag({selected, color,text,active, handleOpacity}) {
     
     const textRef = useRef()
 
     const handleClick = () => {
         const textElement = textRef.current
+        if(!selected) {
+            return
+        }
         if(textElement.style.opacity === '1') {
             textElement.style.opacity = '0.3'
             selected('')
         } else 
             selected(textElement)
     }
+
+    useEffect(() => {
+        if(!selected) return textRef.current.style.cursor = "default"
+    }, [])
 
     return (
         <div className="TagWrapper">
