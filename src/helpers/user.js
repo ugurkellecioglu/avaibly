@@ -1,14 +1,16 @@
 import jwt_decode from 'jwt-decode';
-
-const user = () => {
+const user = false
+const checkAuth = () => {
     const token = localStorage.getItem('token')
-    if (!token) return false
+    if (!token) return user = false
     const decoded = jwt_decode(token)
     const d = new Date(0);
     d.setUTCSeconds(decoded.exp);
     var dateNow = new Date();
-    if (d.getTime() > dateNow.getTime() && token) return true
-    else return false
+    if (d.getTime() > dateNow.getTime() && token) return user = true
+    else return user = false
 }
 
-export default user;
+export {
+    user, checkAuth
+};

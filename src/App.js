@@ -6,23 +6,18 @@ import user from './helpers/user';
 
 function App() {
 
-  const [loggedIn, setloggedIn] = useState(false)
-
-  useEffect(() => {
-    setloggedIn(user())
-  }, [])
 
   return (
     <>
       <div >
-        <Header loggedIn={loggedIn} />
+        <Header />
         <Switch >
           <Route
             render={(props) => (
-              <RegisterLogin {...props} loggedIn={loggedIn} />
+              <RegisterLogin {...props} />
             )}
             path="/index.html" exact />
-          <PrivateRoute loggedIn={loggedIn} path="/home" component={DashboardPage} exact />
+          <PrivateRoute path="/home" component={DashboardPage} exact />
         </Switch>
       </div>
     </>
