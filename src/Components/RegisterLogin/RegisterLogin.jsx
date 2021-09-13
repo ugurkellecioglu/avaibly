@@ -1,21 +1,25 @@
-import React from 'react'
-import { useHistory } from 'react-router'
+import React, { useState } from 'react'
+import { Redirect, useHistory } from 'react-router'
 import { Button } from '..'
 import "../../Styles/css/RegisterLogin.css"
-function RegisterLogin() {
+function RegisterLogin({handleLoginProps}) {
 
     const history = useHistory()
+    const [form, setForm] = useState({})
 
-    const handleLogin = () => {
+    const handleLogin = (form) => {
+        localStorage.setItem('token','trial')
         history.push('/home')
+
     }
     return (
         <div className="RegisterWrapper">
             <form className="Form" >
-                <div ><input type="text" className="Email" placeholder="Enter your email"></input></div>
-                <div ><input type="password" className="Password" placeholder="Enter your password"></input></div>
+                <input type="text" onChange={e => setForm({...form, email: e.target.value})} className="Email" placeholder="Enter your email"></input>
+                <input type="password" onChange={e => setForm({...form, password: e.target.value})} className="Password" placeholder="Enter your password"></input>
+                <Button onClick={(e) => handleLogin(form)} text="Login to my account"/>
             </form>
-            <Button onClick={handleLogin} text="Login to my account"/>
+
             <a href="#">Forgot your password?</a>
         </div>
     )

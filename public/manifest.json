@@ -19,7 +19,7 @@
     "scripts": ["background.js"]
   },
   "permissions": [
-    "activeTab"
+    "activeTab","identity"
     ],
     "icons": { 
       "16": "16.png",

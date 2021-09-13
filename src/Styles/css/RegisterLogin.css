@@ -18,6 +18,11 @@ input, button, submit {
   flex-direction: column;
   align-items: center;
 }
+.RegisterWrapper .Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .RegisterWrapper .Form input {
   border: 1px solid black;
   font-family: "Inter";

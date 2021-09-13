@@ -11,6 +11,7 @@ import Button from "./Button";
 import Notification from "./Notification";
 import Status from "./Status";
 import Statutes from "./Statuses";
+import PrivateRoute from "./PrivateRoute"
 export {
     Header,
     RegisterLogin,
@@ -23,5 +24,6 @@ export {
     Button,
     Notification,
     Status,
-    Statutes
+    Statutes,
+    PrivateRoute
 }

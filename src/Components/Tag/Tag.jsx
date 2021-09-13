@@ -12,7 +12,7 @@ function Tag({selected, color,text,active}) {
     return (
         <div className="TagWrapper">
             <div className="TagText">
-                <span className="Text" ref={textRef} onClick={() => handleClick()} style={active ? {opacity: '1', backgroundColor: color} : {opacity:'0.3', backgroundColor: color}}>{text}</span>
+                <span className="Text" ref={textRef} onClick={() => handleClick()} style={{ backgroundColor: color, opacity: active ? "1" : "0.3" }}>{text}</span>
             </div>
         </div>
     )

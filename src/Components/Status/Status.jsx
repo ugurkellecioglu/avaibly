@@ -24,7 +24,7 @@ function Status({text, active, color}) {
             </div>
             <div className="Footer">
                 <div className="FooterTag">
-                    <Tag text="#i-m-available" color="green" active={true}/>
+                    <Tag text="#i-m-available" color="#FFF500" active={true}/>
                 </div>
             </div>
         </div>
