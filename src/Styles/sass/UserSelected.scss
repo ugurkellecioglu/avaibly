@@ -4,7 +4,6 @@
 
 .UserSelectedWrapper {
     background-color: base.$background-color;
-    height:385px;
     width: base.$width-default;
     display: flex;
     flex-direction: column;
@@ -15,7 +14,7 @@
         background: white;
         border-radius: 8px;
         margin-top: 8px;
-        
+        margin-bottom: 14px;
         .CardBody {
             margin-left: 36px;
             margin-right: 36px;
@@ -38,18 +37,20 @@
     }
     .UpdateWrapper {
         width: base.$width-default;
-        margin-top: 8px;
+        height: 170px;
+        background-color: base.$background-color;
+        position: relative;
         .CheckItem {
             font-family: Inter;
             font-style: normal;
             font-weight: bold;
             font-size: 11px;
             line-height: 16px;
+            margin-top: 18px;
             display: flex;
             justify-content: space-between;
             margin-left: 19px;
             margin-right: 8px;
-            margin-top: 24px;
             align-items: center;
             .CheckboxItem {
                 display: flex;

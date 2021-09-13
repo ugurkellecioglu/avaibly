@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Notification, Tags } from '..'
 import "../../Styles/css/UserSelected.css"
 import Switch from "react-switch";
 
 function UserSelected() {
     
-    const handleTag = (selected) => {
-        console.log('selected', selected)
+
+    const handleTag = (selectedItem) => {
+        setselected(selectedItem)
     }
 
     const [headlineChecked, setheadlineChecked] = useState(false)
@@ -26,6 +27,12 @@ function UserSelected() {
     const handleBio= (checked) => {
         setbioChecked(checked);
     }
+
+
+    const [tags, settags] = useState(null)
+    const handleTagActive = (tagsP) => {
+        settags(tagsP)
+    }
     return (
         <div className="UserSelectedWrapper">
             <Notification active={active} handleClose={handleClose}/>
@@ -33,10 +40,11 @@ function UserSelected() {
                 <div className="CardBody">
                     <div className="Title">Welcome</div>
                     <div className="Info">Has your situation changed? Update your profile 💪</div>
-                    <Tags handleTag={handleTag}/>
+                    <Tags checkActive={handleTagActive} handleTag={handleTag}/>
                 </div>
             </div>
-            <div className="UpdateWrapper">
+            {
+                tags?.filter(tag => tag.active === true).length > 0  ? (<div className="UpdateWrapper">
                 <div className="CheckItem">
                     <p>Update my headline</p>
                     <div className="CheckboxItem">
@@ -55,7 +63,8 @@ function UserSelected() {
                 <div className="ButtonWrapper">
                     <Button text="Update my profile" onClick={()=> handleUpdate()}/>
                 </div>
-            </div>
+            </div>) : ''
+            }
         </div>
     )
 }
