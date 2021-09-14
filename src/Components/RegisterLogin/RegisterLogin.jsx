@@ -14,16 +14,27 @@ function RegisterLogin({handleLoginProps}) {
     const [loading, setloading] = useState(false)
     
 
-    const {token, email, expires_in} = useSelector(userSelector)
-    const handleLogin = (form) => {
-        dispatch(signIn(form)).then((response)=> {
-            if (response.payload.token) {
-                localStorage.setItem('token',response.payload.token)
-                localStorage.setItem('email', response.payload.email)
-                localStorage.setItem('expires_in', response.payload.expires_in)
-                history.push('/home')
-            }
-        })
+    const userState = useSelector(userSelector)
+    const [user, setuser] = useState(userState)
+    const [mode, setmode] = useState(userState.formMode)
+    useEffect(() => {
+        setuser(userState)
+        setmode(userState.formMode)
+    }, [userState])
+
+    const handleSubmit = (form, mode) => {
+        if(mode === 'login') {
+            dispatch(signIn(form)).then((response)=> {
+                if (response.payload.token) {
+                    localStorage.setItem('token',response.payload.token)
+                    localStorage.setItem('email', response.payload.email)
+                    localStorage.setItem('expires_in', response.payload.expires_in)
+                    history.push('/home')
+                }
+            })
+        } else if (mode === 'register') {
+            
+        }
     }
 
     return (
@@ -35,11 +46,15 @@ function RegisterLogin({handleLoginProps}) {
                 <input type="password" onChange={e => setForm({...form, password: e.target.value})} className="Password" placeholder="Enter your password"></input>
                 <Button onClick={(e) => {
                     e.preventDefault()
-                    handleLogin(form)
-                }} text="Login to my account"/>
+                     handleSubmit(form, mode)
+                }} text={mode === 'login' ? "Login to my account" : 'Create my account'}/>
             </form>
 
-            <a href="#">Forgot your password?</a>
+            {
+                mode === 'login' ? (
+                    <a href="#">Forgot your password?</a>
+                ) : null
+            }
         </div>
     )
 }

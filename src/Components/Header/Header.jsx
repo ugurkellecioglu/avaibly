@@ -3,7 +3,7 @@ import "../../Styles/css/Header.css"
 import Logo from "../../Assets/logo.svg"
 import Category from "../../Assets/categoryIcon.svg"
 import { useHistory } from 'react-router'
-import { userSelector, clearState } from '../../features/user/userSlice'
+import { userSelector, clearState, setMode } from '../../features/user/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import user from '../../helpers/user'
 
@@ -19,9 +19,14 @@ function Header() {
         localStorage.removeItem('expires_in')
         localStorage.removeItem('email')
     }
+    const handleSelected = () => {
+        dispatch(setMode(user.formMode === 'login' ? 'register' : 'login'))
+    }
+    const [mode, setmode] = useState(user.formMode)
     
     useEffect(() => {
         setUser(userState)
+        setmode(userState.formMode)
     }, [userState])
 
     return (
@@ -37,7 +42,7 @@ function Header() {
                                <a href="#" onClick={handleLogout}>Logout</a>
                            </div>  :  
                            <div className="Right">
-                                <a href="#">Register</a>
+                                <a href="#" onClick={handleSelected}>{mode === 'register' ? 'Login' : 'Register'}</a>
                             </div> 
                            }
                            

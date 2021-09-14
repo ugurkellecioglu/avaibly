@@ -46,7 +46,8 @@ export const userSlice = createSlice({
     isError: false,
     isSuccess: false,
     errorMessage: '',
-    selectedTag: ''
+    selectedTag: '',
+    formMode: 'login',
   },
   reducers: {
     clearState(state, action) {
@@ -57,12 +58,17 @@ export const userSlice = createSlice({
         isError: false,
         isSuccess: false,
         errorMessage: '',
-        selectedTag: ''
+        selectedTag: '',
+        formMode: 'login'
       }
       return state
     },
     selectTag(state, action) {
       state = { ...state, selectedTag: action.payload }
+      return state
+    },
+    setMode(state, action) {
+      state = { ...state, formMode: action.payload }
       return state
     }
   },
@@ -108,6 +114,6 @@ export const userSlice = createSlice({
   }
 })
 
-export const { clearState } = userSlice.actions
+export const { clearState, selectTag, setMode } = userSlice.actions
 
 export const userSelector = (state) => state.user
