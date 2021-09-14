@@ -13,28 +13,17 @@ export const signIn = createAsyncThunk('user/signIn', async ({ email, password }
   })
 })
 
-export const signUp = createAsyncThunk('user/signup', async ({ username, password }, thunkAPI) => {
-  try {
-    const response = await fetch('http://localhost:4000/api/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        username,
-        password
-      })
-    })
-    const result = await response.json()
-    if (response.status === 200) {
-      return result.data
-    } else {
-      return thunkAPI.rejectWithValue(result)
-    }
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.response.data)
-  }
+export const signUp = createAsyncThunk('user/signUp', async ({ email, password }, thunkAPI) => {
+  return await axios.post('/register', {
+    email,
+    password
+  }).then(response => {
+    return thunkAPI.fulfillWithValue(response.data)
+  }).catch(e => {
+    return thunkAPI.rejectWithValue(e)
+  })
 })
+
 
 export const userSlice = createSlice({
   name: 'user',

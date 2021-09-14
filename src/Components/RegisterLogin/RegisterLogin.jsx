@@ -33,7 +33,17 @@ function RegisterLogin({handleLoginProps}) {
                 }
             })
         } else if (mode === 'register') {
-            
+            dispatch(signUp(form)).then(response => {
+                console.log('kayıt', response)
+                dispatch(signIn(form)).then(result => {
+                    if (result.payload.token) {
+                        localStorage.setItem('token',result.payload.token)
+                        localStorage.setItem('email', result.payload.email)
+                        localStorage.setItem('expires_in', result.payload.expires_in)
+                        history.push('/home')
+                    }
+                })
+            })
         }
     }
 
