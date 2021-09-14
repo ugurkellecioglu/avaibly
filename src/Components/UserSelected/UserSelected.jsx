@@ -3,6 +3,25 @@ import { Button, Notification, Tags } from '..'
 import "../../Styles/css/UserSelected.css"
 import Switch from "react-switch";
 
+function useDelayUnmount(isMounted, delayTime) {
+    const [showDiv, setShowDiv] = useState(false);
+    useEffect(() => {
+      let timeoutId;
+      if (isMounted && !showDiv) {
+        setShowDiv(true);
+      } else if (!isMounted && showDiv) {
+        timeoutId = setTimeout(() => setShowDiv(false), delayTime); //delay our unmount
+      }
+      return () => clearTimeout(timeoutId); // cleanup mechanism for effects , the use of setTimeout generate a sideEffect
+    }, [isMounted, delayTime, showDiv]);
+    return showDiv;
+  }
+
+  const mountedStyle = { animation: "inAnimation 500ms ease-in" };
+const unmountedStyle = {
+  animation: "outAnimation 500ms ease-out",
+  animationFillMode: "forwards"
+};
 function UserSelected() {
     
 
@@ -30,6 +49,15 @@ function UserSelected() {
 
 
     const [tags, settags] = useState(null)
+
+    const [isMounted, setIsMounted] = useState(false);
+    const showDiv = useDelayUnmount(isMounted,1000);
+
+
+  useEffect(() => {
+    setIsMounted(tags?.filter(tag => tag.active === true).length > 0)
+  }, [tags])
+
     const handleTagActive = (tagsP) => {
         settags(tagsP)
     }
@@ -44,7 +72,7 @@ function UserSelected() {
                 </div>
             </div>
             {
-                tags?.filter(tag => tag.active === true).length > 0  && (<div className="UpdateWrapper">
+                showDiv && (<div className="UpdateWrapper" style={isMounted ? mountedStyle : unmountedStyle}>
                 <div className="CheckItem">
                     <p>Update my headline</p>
                     <div className="CheckboxItem">

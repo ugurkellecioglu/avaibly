@@ -2,30 +2,29 @@ import axios from '../../constants/axios'
 import React, { useEffect, useState } from 'react'
 import { Redirect, useHistory } from 'react-router'
 import { Button } from '..'
+import { useDispatch, useSelector } from 'react-redux'
+import { signIn, signUp, userSelector } from '../../features/user/userSlice'
+
 import "../../Styles/css/RegisterLogin.css"
 function RegisterLogin({handleLoginProps}) {
+    const dispatch = useDispatch()
     
     const history = useHistory()
     const [form, setForm] = useState({})
     const [loading, setloading] = useState(false)
+    
+
+    const {token, email, expires_in} = useSelector(userSelector)
     const handleLogin = (form) => {
-        setloading(true)
-            axios.post('/login', {
-                email: form.email,
-                password: form.password
-        }).then(response => {
-            setloading(false)
-            if(response.data) {
-                localStorage.setItem('token', response.data.token)
-                localStorage.setItem('expires_in', response.data.expires_in)
+        dispatch(signIn(form)).then((response)=> {
+            if (response.payload.token) {
+                localStorage.setItem('token',response.payload.token)
+                localStorage.setItem('email', response.payload.email)
+                localStorage.setItem('expires_in', response.payload.expires_in)
                 history.push('/home')
             }
-        }).catch(e => {
-
-        }) 
+        })
     }
-
-
 
     return (
         
