@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Button, Notification, Tags } from '..'
 import "../../Styles/css/UserSelected.css"
 import Switch from "react-switch";
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { setBio, setHeadline, userSelector } from '../../features/user/userSlice';
 
 function useDelayUnmount(isMounted, delayTime) {
     const [showDiv, setShowDiv] = useState(false);
@@ -24,6 +27,13 @@ const unmountedStyle = {
 };
 function UserSelected() {
     
+    const userState = useSelector(userSelector)
+    const [user, setuser] = useState(userState)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        setuser(userState)
+    }, [userState])
 
     const handleTag = (selectedItem) => {
         setselected(selectedItem)
@@ -32,6 +42,7 @@ function UserSelected() {
     const [headlineChecked, setheadlineChecked] = useState(false)
     const handleHeadline = (checked) => {
         setheadlineChecked(checked);
+        dispatch(setHeadline(checked))
     }
     
     const [active, setActive] = useState(false) 
@@ -45,6 +56,7 @@ function UserSelected() {
     const [bioChecked, setbioChecked] = useState(false)
     const handleBio= (checked) => {
         setbioChecked(checked);
+        dispatch(setBio(checked))
     }
 
 
