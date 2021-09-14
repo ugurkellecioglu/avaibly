@@ -48,6 +48,7 @@ function UserSelected() {
     const [active, setActive] = useState(false) 
 
     const handleUpdate = () => {
+        
         setActive(true)
     }
     const handleClose = () => {
