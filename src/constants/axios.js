@@ -1,7 +1,7 @@
 import axiosClass from "axios"
 
 const axiosConfig = {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://agile-temple-31848.herokuapp.com',
 };
 
 const axios = axiosClass.create(axiosConfig)

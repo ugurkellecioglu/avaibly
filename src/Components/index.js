@@ -12,6 +12,8 @@ import Notification from "./Notification";
 import Status from "./Status";
 import Statutes from "./Statuses";
 import PrivateRoute from "./PrivateRoute"
+import Loading from "./Loading";
+
 export {
     Header,
     RegisterLogin,
@@ -25,5 +27,6 @@ export {
     Notification,
     Status,
     Statutes,
-    PrivateRoute
+    PrivateRoute,
+    Loading
 }

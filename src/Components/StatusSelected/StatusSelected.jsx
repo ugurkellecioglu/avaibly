@@ -9,7 +9,7 @@ function StatusSelected() {
             style={{width: '375px'}}
             verticalContainerStyle={{width:'3px'}}
             > 
-                <Statuses /> 
+            <Statuses /> 
             </ScrollArea>
         </div>
         

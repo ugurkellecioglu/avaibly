@@ -11,11 +11,9 @@ input, button, submit {
 }
 
 .Wrapper {
-  height: 346px;
-  position: relative !important;
-  width: 375px;
-  background-color: #DFE7EF;
-  max-height: 346px !important;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-/*# sourceMappingURL=StatusSelected.css.map */
+/*# sourceMappingURL=Loading.css.map */

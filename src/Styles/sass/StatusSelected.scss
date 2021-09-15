@@ -2,6 +2,7 @@
 
 .Wrapper {
     height: 346px;
+    position: relative !important;
     width: base.$width-default;
     background-color: base.$background-color;
     max-height: 346px !important;

@@ -48,7 +48,12 @@ function UserSelected() {
     const [active, setActive] = useState(false) 
 
     const handleUpdate = () => {
-        
+        console.log({
+            email: user.email,
+            headline: user.updateMyHeadline,
+            bio: user.updateMyBio,
+            selectedTag: user.selectedTag
+        })
         setActive(true)
     }
     const handleClose = () => {
